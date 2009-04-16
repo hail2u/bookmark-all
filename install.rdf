@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+  <Description about="urn:mozilla:install-manifest">
+    <em:id>{a76cd07b-f0d7-4ef9-9566-8faef6e290e4}</em:id>
+    <em:name>Bookmark All</em:name>
+    <em:version>1.2.4</em:version>
+    <em:description>Bookmark all opening tabs quickly without any dialog.</em:description>
+    <em:creator>Kyo Nagashima</em:creator>
+    <em:homepageURL>http://hail2u.net/archives/fxexts.html#bookmark-all</em:homepageURL>
+    <em:optionsURL>chrome://bookmark-all/content/prefs-overlay.xul</em:optionsURL>
+
+    <em:targetApplication>
+      <Description>
+        <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+        <em:minVersion>3.0</em:minVersion>
+        <em:maxVersion>3.0.*</em:maxVersion>
+      </Description>
+    </em:targetApplication>
+  </Description>
+</RDF>

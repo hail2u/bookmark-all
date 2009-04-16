@@ -1,0 +1,5 @@
+<!ENTITY bookmark-all.command.label     "開いているタブをすべてブックマーク">
+<!ENTITY bookmark-all.command.accesskey "A">
+<!ENTITY bookmark-all.command.tooltip   "現在開いている全てのタブを、フォルダを指定することなく一発でブックマークします">
+
+<!ENTITY bookmark-all.prefs.label "フォルダ名の頭に付ける固定の文字列を指定してください">

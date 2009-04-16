@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://browser/skin/" type="text/css"?>
+<!DOCTYPE overlay SYSTEM "chrome://bookmark-all/locale/overlay.dtd">
+<dialog xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+  id="bookmark-all-prefs-overlay"
+  title="Bookmark All"
+  buttons="accept, cancel"
+  onload="bookmarkAllPrefs.loadPrefs();"
+  ondialogaccept="bookmarkAllPrefs.savePrefs();"
+  width="480"
+  height="120">
+  <script type="application/x-javascript"
+    src="chrome://global/content/nsUserSettings.js"/>
+  <script type="application/x-javascript"
+    src="chrome://bookmark-all/content/prefs-overlay.js"/>
+  <script type="application/x-javascript"
+    src="chrome://bookmark-all/content/vars.js"/>
+
+  <vbox>
+    <label control="prefPrefix"
+      value="&bookmark-all.prefs.label;"/>
+    <textbox id="prefPrefix"/>
+  </vbox>
+</dialog>

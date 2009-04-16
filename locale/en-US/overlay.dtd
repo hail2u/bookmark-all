@@ -1,0 +1,5 @@
+<!ENTITY bookmark-all.command.label     "Bookmark All">
+<!ENTITY bookmark-all.command.accesskey "A">
+<!ENTITY bookmark-all.command.tooltip   "Bookmark all opening tabs quickly without any dialog">
+
+<!ENTITY bookmark-all.prefs.label "Enter prefix string for folder name">

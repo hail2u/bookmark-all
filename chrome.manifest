@@ -1,0 +1,10 @@
+content	bookmark-all	content/
+
+overlay	chrome://browser/content/browser.xul	chrome://bookmark-all/content/overlay.xul
+
+locale	bookmark-all	en-US	locale/en-US/
+locale	bookmark-all	ja	locale/ja/
+
+skin	bookmark-all	classic/1.0	skin/
+style	chrome://global/content/customizeToolbar.xul	chrome://bookmark-all/skin/overlay.css
+style	chrome://browser/content/browser.xul	chrome://bookmark-all/skin/overlay.css

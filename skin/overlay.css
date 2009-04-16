@@ -1,0 +1,7 @@
+#bookmark-all-button {
+  list-style-image: url("chrome://bookmark-all/skin/toolbarbutton-icon-large.png");
+}
+
+toolbar[iconsize="small"] #bookmark-all-button {
+  list-style-image: url("chrome://bookmark-all/skin/toolbarbutton-icon-small.png");
+}

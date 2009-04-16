@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE overlay SYSTEM "chrome://bookmark-all/locale/overlay.dtd">
+<overlay xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+  id="bookmark-all-overlay">
+  <script type="application/x-javascript"
+    src="chrome://global/content/nsUserSettings.js"/>
+  <script type="application/x-javascript"
+    src="chrome://bookmark-all/content/overlay.js"/>
+  <script type="application/x-javascript"
+    src="chrome://bookmark-all/content/vars.js"/>
+
+  <menupopup id="menu_ToolsPopup">
+    <menuitem id="menu_bookmark-all"
+      label="&bookmark-all.command.label;"
+      accesskey="&bookmark-all.command.accesskey;"
+      key="key_bookmark-all"
+      insertbefore="sanitizeSeparator"
+      oncommand="bookmarkAll.bookmarkAllTabs();"/>
+  </menupopup>
+
+  <toolbarpalette id="BrowserToolbarPalette">
+    <toolbarbutton id="bookmark-all-button"
+      class="toolbarbutton-1"
+      label="&bookmark-all.command.label;"
+      tooltiptext="&bookmark-all.command.tooltip;"
+      oncommand="bookmarkAll.bookmarkAllTabs();"/>
+  </toolbarpalette>
+
+  <keyset id="mainKeyset">
+    <key id="key_bookmark-all"
+      modifiers="accel alt"
+      key="D"
+      oncommand="bookmarkAll.bookmarkAllTabs();"/>
+  </keyset>
+</overlay>
