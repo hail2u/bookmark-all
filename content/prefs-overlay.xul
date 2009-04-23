@@ -13,8 +13,6 @@
     src="chrome://global/content/nsUserSettings.js"/>
   <script type="application/x-javascript"
     src="chrome://bookmark-all/content/prefs-overlay.js"/>
-  <script type="application/x-javascript"
-    src="chrome://bookmark-all/content/vars.js"/>
 
   <vbox>
     <label control="prefPrefix"

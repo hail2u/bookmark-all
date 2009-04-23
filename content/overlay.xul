@@ -7,7 +7,7 @@
   <script type="application/x-javascript"
     src="chrome://bookmark-all/content/overlay.js"/>
   <script type="application/x-javascript"
-    src="chrome://bookmark-all/content/vars.js"/>
+    src="chrome://bookmark-all/content/prefs-overlay.js"/>
 
   <menupopup id="menu_ToolsPopup">
     <menuitem id="menu_bookmark-all"

@@ -1,6 +1,6 @@
 var bookmarkAll = {
   bookmarkAllTabs: function() {
-    var strFolderName = nsPreferences.copyUnicharPref(_prefPrefix, _prefPrefixDefault) + this.getDateTime();
+    var strFolderName = nsPreferences.copyUnicharPref(bookmarkAllPrefs.key, bookmarkAllPrefs.default) + this.getDateTime();
 
     var bookmarksService = Components.classes["@mozilla.org/browser/nav-bookmarks-service;1"].getService(Components.interfaces.nsINavBookmarksService);
     var menuFolder = bookmarksService.bookmarksMenuFolder;
