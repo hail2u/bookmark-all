@@ -7,16 +7,19 @@
   buttons="accept, cancel"
   onload="bookmarkAllPrefs.loadPrefs();"
   ondialogaccept="bookmarkAllPrefs.savePrefs();"
-  width="480"
-  height="120">
+  width="360"
+  height="180">
   <script type="application/x-javascript"
     src="chrome://global/content/nsUserSettings.js"/>
   <script type="application/x-javascript"
     src="chrome://bookmark-all/content/prefs-overlay.js"/>
 
   <vbox>
+    <label control="prefPath"
+      value="&bookmark-all.prefs.path.label;"/>
+    <textbox id="prefPath"/>
     <label control="prefPrefix"
-      value="&bookmark-all.prefs.label;"/>
+      value="&bookmark-all.prefs.prefix.label;"/>
     <textbox id="prefPrefix"/>
   </vbox>
 </dialog>
