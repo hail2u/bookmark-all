@@ -43,20 +43,8 @@ var bookmarkAll = {
     }
   },
 
-  getDateTime: function() {
-    var objDate = new Date();
-    var yy = objDate.getFullYear().toString();
-    var mm = "00" + (objDate.getMonth() + 1).toString();
-    mm = mm.substr(mm.length - 2);
-    var dd = "00" + objDate.getDate().toString();
-    dd = dd.substr(dd.length - 2);
-    var hh = "00" + objDate.getHours().toString();
-    hh = hh.substr(hh.length - 2);
-    var nn = "00" + objDate.getMinutes().toString();
-    nn = nn.substr(nn.length - 2);
-    var ss = "00" + objDate.getSeconds().toString();
-    ss = ss.substr(ss.length - 2);
-
-    return yy + "/" + mm + "/" + dd + " " + hh + ":" + nn + ":" + ss;
+  getDateTime: function () {
+    var now = new Date();
+    return now.toLocaleFormat("%Y/%m/%d %H:%M:%S");
   }
 };
