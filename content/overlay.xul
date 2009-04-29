@@ -14,7 +14,7 @@
       label="&bookmark-all.command.label;"
       accesskey="&bookmark-all.command.accesskey;"
       key="key_bookmark-all"
-      insertbefore="sanitizeSeparator"
+      insertbefore="browserToolsSeparator"
       oncommand="bookmarkAll.bookmarkAllTabs();"/>
   </menupopup>
 
