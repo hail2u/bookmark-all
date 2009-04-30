@@ -16,10 +16,12 @@
 
   <vbox>
     <label control="prefPath"
-      value="&bookmark-all.prefs.path.label;"/>
+      value="&bookmark-all.prefs.path.label;"
+      accesskey="&bookmark-all.prefs.path.accesskey;"/>
     <textbox id="prefPath"/>
     <label control="prefPrefix"
-      value="&bookmark-all.prefs.prefix.label;"/>
+      value="&bookmark-all.prefs.prefix.label;"
+      accesskey="&bookmark-all.prefs.prefix.accesskey;"/>
     <textbox id="prefPrefix"/>
   </vbox>
 </dialog>
