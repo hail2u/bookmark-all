@@ -1,6 +1,6 @@
 var bookmarkAllPrefs = {
   PATH_KEY:       "extensions.bookmark-all.path",
-  PATH_DEFAULT:   "",
+  PATH_DEFAULT:   "Bookmark All",
   PREFIX_KEY:     "extensions.bookmark-all.prefix",
   PREFIX_DEFAULT: "Bookmarks at: ",
 
