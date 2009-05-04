@@ -14,8 +14,14 @@ var bookmarkAll = {
     // ブックマークを格納するフォルダを格納するパスがなかったら作成
     if (strPrefPath) {
       strPrefPath.split("/").forEach(function (s) {
-        if (s && !bookmarksService.getChildFolder(targetFolder, s)) {
+        if (!s) return;
+
+        var tempFolder = bookmarksService.getChildFolder(targetFolder, s);
+
+        if (!tempFolder) {
           targetFolder = bookmarksService.createFolder(targetFolder, s, -1);
+        } else {
+          targetFolder = tempFolder;
         }
       });
     }
