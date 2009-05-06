@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE overlay SYSTEM "chrome://bookmark-all/locale/overlay.dtd">
-<overlay xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
-  id="bookmark-all-overlay">
+<overlay id="bookmark-all-overlay"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
   <script type="application/x-javascript"
     src="chrome://global/content/nsUserSettings.js"/>
   <script type="application/x-javascript"

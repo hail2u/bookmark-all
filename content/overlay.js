@@ -1,5 +1,5 @@
 var bookmarkAll = {
-  bookmarkAllTabs: function() {
+  bookmarkAllTabs: function () {
     // 設定のロード
     var prefs = bookmarkAllPrefs;
     var strPrefPath   = nsPreferences.copyUnicharPref(prefs.PATH_KEY, prefs.PATH_DEFAULT);
@@ -30,23 +30,18 @@ var bookmarkAll = {
     targetFolder = bookmarksService.createFolder(targetFolder, strPrefPrefix + this.getDateTime(), -1);
 
     // 全てのタブをブックマーク
-    var browsers = document.getElementById('content').browsers;
-
-    for (var i = 0; i < browsers.length; ++i) {
-      var webNav = browsers[i].webNavigation;
-      var url = webNav.currentURI.spec;
-      var name = "";
-      var charset;
+    document.getElementById("content").browsers.forEach(function (b) {
+      var webNav = b.webNavigation;
+      var url    = webNav.currentURI.spec;
 
       try {
-        var doc = webNav.document;
-        name = doc.title || url;
+        var title = webNav.document.title || url;
       } catch (e) {
-        name = url;
+        title = url;
       }
 
-      var id = bookmarksService.insertBookmark(targetFolder, webNav.currentURI, -1, name);
-    }
+      var id = bookmarksService.insertBookmark(targetFolder, webNav.currentURI, -1, title);
+    });
   },
 
   getDateTime: function () {
