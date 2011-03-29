@@ -5,10 +5,15 @@ var bookmarkAll = {
     var strPrefPath   = nsPreferences.copyUnicharPref(prefs.PATH_KEY, prefs.PATH_DEFAULT);
     var strPrefPrefix = nsPreferences.copyUnicharPref(prefs.PREFIX_KEY, prefs.PREFIX_DEFAULT);
 
-    // ブックマーク・サービス
+    //  履歴サービス
+    var historyService = Components.classes["@mozilla.org/browser/nav-history-service;1"].getService(Components.interfaces.nsINavHistoryService);
+    var options = historyService.getNewQueryOptions();
+    var query = historyService.getNewQuery();
+
+    // ブックマークサービス
     var bookmarksService = Components.classes["@mozilla.org/browser/nav-bookmarks-service;1"].getService(Components.interfaces.nsINavBookmarksService);
 
-    // ブックマークのルートを取得
+    // ブックマークのルートを開く
     var targetFolder = bookmarksService.bookmarksMenuFolder;
 
     // ブックマークを格納するフォルダを格納するパスがなかったら作成
@@ -16,12 +21,33 @@ var bookmarkAll = {
       strPrefPath.split("/").forEach(function (s) {
         if (!s) return;
 
-        var tempFolder = bookmarksService.getChildFolder(targetFolder, s);
+        // var tempFolder = bookmarksService.getChildFolder(targetFolder, s);
 
-        if (!tempFolder) {
+        // if (!tempFolder) {
+        //   targetFolder = bookmarksService.createFolder(targetFolder, s, -1);
+        // } else {
+        //   targetFolder = tempFolder;
+        // }
+
+        query.setFolders([targetFolder], 1);
+        var result = historyService.executeQuery(query, options);
+        var targetRoot = result.root;
+        targetRoot.containerOpen = true;
+        var find = false;
+
+        for (var i = 0, l = targetRoot.childCount; i < l; i ++) {
+          var node = targetRoot.getChild(i);
+
+          if (node.title === s) {
+            targetFolder = node.itemId;
+            find = true;
+          }
+        }
+
+        targetRoot.containerOpen = false;
+
+        if (!find) {
           targetFolder = bookmarksService.createFolder(targetFolder, s, -1);
-        } else {
-          targetFolder = tempFolder;
         }
       });
     }
