@@ -7,14 +7,14 @@
     <em:version>1.3.1</em:version>
     <em:description>Bookmark all opening tabs quickly without any dialog.</em:description>
     <em:creator>Kyo Nagashima</em:creator>
-    <em:homepageURL>http://hail2u.net/archives/fxexts.html#bookmark-all</em:homepageURL>
+    <em:homepageURL>http://hail2u.github.com/firefox-addons.html#bookmark-all</em:homepageURL>
     <em:optionsURL>chrome://bookmark-all/content/prefs-overlay.xul</em:optionsURL>
 
     <em:targetApplication>
       <Description>
         <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
         <em:minVersion>3.0</em:minVersion>
-        <em:maxVersion>3.5.*</em:maxVersion>
+        <em:maxVersion>4.0.*</em:maxVersion>
       </Description>
     </em:targetApplication>
   </Description>
